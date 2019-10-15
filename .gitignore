@@ -1,0 +1,8 @@
+/bin/*
+/lib/*
+/__pycache__/*
+/lib64/*
+/include/*
+pyenv.cfg
+/logs/*
+
