@@ -1,4 +1,4 @@
-from flask import render_template,flash, redirect,url_for,request
+from flask import render_template,flash, redirect,url_for,request,g
 from werkzeug.urls import url_parse
 from app import app,db
 from app.forms import LoginForm,RegistrationForm,EditProfileForm,PostForm,ResetPasswordRequestForm,ResetPasswordForm
@@ -6,6 +6,7 @@ from flask_login import current_user, login_user, logout_user,login_required
 from app.models import User,Post
 from datetime import datetime
 from app.email import send_password_reset_email
+from flask_babel import get_locale
 
 
 @app.route('/',methods=['GET','POST'])
@@ -166,6 +167,9 @@ def reset_password(token):
 		flash('Your password has been reset')
 		return redirect(url_for('login'))	
 	return render_template('reset_password.html',form=form)
+@app.before_request
+def before_request():
+	g.locale=str(get_locale())
 '''def login():
 	form=LoginForm()
 	if form.validate_on_submit():
