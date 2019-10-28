@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-25 10:55-0400\n"
+"POT-Creation-Date: 2019-10-28 01:21-0400\n"
 "PO-Revision-Date: 2019-10-25 10:54-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: hi\n"
@@ -20,14 +20,26 @@ msgstr ""
 
 #: app/__init__.py:22
 msgid "Please log in to access this page."
-msgstr ""
+msgstr "इस पृष्ठ का प्रयोग करने केलिए लॉगिन करें।'"
 
 #: app/forms.py:8
 msgid "Username"
-msgstr ""
+msgstr "'उपयोगकर्ता नाम'"
+
+#: app/translate.py:9
+msgid "Error : the translation service failed."
+msgstr "'त्रुटि: अनुवाद सेवा विफल।'"
 
 #: app/templates/_post.html:7
 #, python-format
 msgid "%(username)s  says : %(when)s"
+msgstr ""
+
+#: app/templates/_post.html:15
+msgid "Translate"
+msgstr ""
+
+#: app/templates/base.html:62
+msgid "Error: Could not contact server."
 msgstr ""
 
