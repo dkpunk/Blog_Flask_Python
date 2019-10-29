@@ -1,6 +1,6 @@
 from flask import render_template,flash, redirect,url_for,request,g,jsonify
 from werkzeug.urls import url_parse
-from app import db
+from app import app,db
 from app.forms import LoginForm,RegistrationForm,EditProfileForm,PostForm,ResetPasswordRequestForm,ResetPasswordForm
 from flask_login import current_user, login_user, logout_user,login_required
 from app.models import User,Post
